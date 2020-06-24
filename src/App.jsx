@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Board from "./components/board";
 import initializeDeck from "./deck";
 import Navbar from "./components/navbar";
+import img from "./components/img";
 
 export default function App() {
   const [cards, setCards] = useState([]);
@@ -46,7 +47,7 @@ export default function App() {
   };
   const preloadImages = () => {
     cards.map((card) => {
-      const src = `https://saif88888.github.io/img/${card.type}.png`;
+      const src = `/img/${card.type}.png`;
 
       new Image().src = src;
     });

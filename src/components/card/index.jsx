@@ -28,8 +28,8 @@ export default function Card({
           className={flipped ? "front" : "back"}
           src={
             flipped || solved
-              ? `https://saif88888.github.io/img/${type}.png`
-              : `https://saif88888.github.io/img/X.png`
+              ? `components/img/${type}.png`
+              : `components/img/X.png`
           }
         />
       </div>
