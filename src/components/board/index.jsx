@@ -6,8 +6,8 @@ import Card from "../card";
 import "./styles.css";
 
 export default function Board({
-  dimension,
   disabled,
+  dimension,
   cards,
   flipped,
   solved,
@@ -20,8 +20,8 @@ export default function Board({
           key={card.id}
           id={card.id}
           type={card.type}
-          width={150}
-          height={150}
+          width={100}
+          height={100}
           flipped={flipped.includes(card.id)}
           solved={solved.includes(card.id)}
           handleClick={handleClick}

@@ -17,7 +17,7 @@ export default function App() {
 
   useEffect(() => {
     preloadImages();
-  }, cards);
+  }, [cards]);
 
   useEffect(() => {
     const resizeListner = window.addEventListener("resize", resizeBoard);
@@ -46,7 +46,7 @@ export default function App() {
   };
   const preloadImages = () => {
     cards.map((card) => {
-      const src = `/img/${card.type}.png`;
+      const src = `https://saif88888.github.io/img/${card.type}.png`;
 
       new Image().src = src;
     });
@@ -55,6 +55,7 @@ export default function App() {
     setFlipped([]);
     setDisabled(false);
   };
+
   const sameCardClicked = (id) => flipped.includes(id);
   const isMatch = (id) => {
     const clickedCard = cards.find((card) => card.id === id);
